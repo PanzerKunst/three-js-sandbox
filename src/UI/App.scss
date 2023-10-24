@@ -1,0 +1,32 @@
+@import "/src/UI/_GlobalStyles/colors";
+@import "/src/UI/_GlobalStyles/sizes";
+@import "/src/UI/_GlobalStyles/mixins";
+
+html {
+  // Hide scrollbars for ThreeJs canvas
+  overflow: hidden;
+}
+
+body {
+  background-color: $color-app-bg;
+  color: $color-body-text;
+  font-family: "Proxima Nova", sans-serif;
+
+  // Border-box everything by default
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+
+// To avoid these elements to bleed through the parent
+img,
+iframe,
+embed,
+video {
+  max-width: 100%;
+  display: block; // To avoid extra space below the element
+}
