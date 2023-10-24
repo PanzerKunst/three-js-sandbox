@@ -12,6 +12,10 @@ function getViewportDetails() {
   }
 }
 
+function updatePixelRatio(renderer: THREE.WebGLRenderer) {
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+}
+
 export function render08FullscreenAndResizing(canvas: HTMLCanvasElement) {
   let viewport = getViewportDetails()
 
@@ -45,6 +49,7 @@ export function render08FullscreenAndResizing(canvas: HTMLCanvasElement) {
     canvas: canvas
   })
   renderer.setSize(viewport.width, viewport.height)
+  updatePixelRatio(renderer)
 
   /**
    * Animate
@@ -73,5 +78,15 @@ export function render08FullscreenAndResizing(canvas: HTMLCanvasElement) {
     camera.updateProjectionMatrix()
 
     renderer.setSize(viewport.width, viewport.height)
+    updatePixelRatio(renderer)
+  })
+
+  // Toggle fullscreen on double-click
+  window.addEventListener("dblclick", () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen()
+    } else {
+      canvas.requestFullscreen()
+    }
   })
 }
