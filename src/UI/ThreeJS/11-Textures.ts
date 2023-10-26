@@ -141,6 +141,7 @@ export function render11Textures(canvas: HTMLCanvasElement) {
   const renderer = new THREE.WebGLRenderer({
     canvas: canvas
   })
+  renderer.outputColorSpace = THREE.LinearSRGBColorSpace
   renderer.setSize(viewport.width, viewport.height)
   updatePixelRatio(renderer)
 
