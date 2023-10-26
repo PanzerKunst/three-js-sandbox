@@ -50,6 +50,11 @@ export function render11Textures(canvas: HTMLCanvasElement) {
     // Error loading the texture
   })
 
+  /* Good resources for textures:
+  - poliigon.com
+  - 3dtextures.me
+  - arroway-textures.ch */
+
   /* const alphaTexture = textureLoader.load("/images/textures/door/alpha.jpg")
   const heightTexture = textureLoader.load("/images/textures/door/height.jpg")
   const normalTexture = textureLoader.load("/images/textures/door/normal.jpg")
