@@ -1,6 +1,6 @@
-/* eslint-disable */
 import { useEffect, useRef } from "react"
-import { render08FullscreenAndResizing } from "../ThreeJS/08-FullscreenAndResizing.ts"
+
+import { render11Textures } from "../ThreeJS/11-Textures.ts"
 
 import "./HomePage.scss"
 
@@ -15,7 +15,7 @@ export default function HomePage() {
       return
     }
 
-    render08FullscreenAndResizing(canvas.current)
+    render11Textures(canvas.current)
     hasMounted = true
   }, [])
 

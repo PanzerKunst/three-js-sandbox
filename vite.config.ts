@@ -1,15 +1,16 @@
-import eslint from "@rollup/plugin-eslint"
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
+import checker from "vite-plugin-checker"
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    eslint({
-      include: ["src/**/*.tsx", "src/**/*.ts"],
-      throwOnError: true
-    }),
-    react()
+    react(),
+    checker({
+      eslint: {
+        lintCommand: "eslint './src/**/*.{ts,tsx,js,jsx}'",
+      },
+    })
   ],
   build: {
     manifest: true,
