@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 
-import { render11Textures } from "../ThreeJS/11-Textures.ts"
+import { render12Materials } from "../ThreeJS/12-Materials.ts"
 
 import "./HomePage.scss"
 
@@ -15,7 +15,7 @@ export default function HomePage() {
       return
     }
 
-    render11Textures(canvas.current)
+    render12Materials(canvas.current)
     hasMounted = true
   }, [])
 

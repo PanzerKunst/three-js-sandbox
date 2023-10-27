@@ -20,7 +20,7 @@ module.exports = {
     "quotes": ["error", "double"],
     "indent": ["error", 2],
     "semi": ["error", "never"],
-    "max-len": ["warn", {"code": 100}],
+    "max-len": ["warn", {"code": 150}],
     "no-unused-vars": "error",
     "react/react-in-jsx-scope": "off",
     "react/jsx-max-props-per-line": ["error", {"maximum": 3}],
