@@ -52,6 +52,11 @@ export function render12Materials(canvas: HTMLCanvasElement) {
     // Error loading the texture
   })
 
+  /* Good resources for textures:
+  - poliigon.com
+  - 3dtextures.me
+  - arroway-textures.ch */
+
   const doorAlphaTexture = textureLoader.load("/images/textures/door/alpha.jpg")
   const doorHeightTexture = textureLoader.load("/images/textures/door/height.jpg")
   const doorNormalTexture = textureLoader.load("/images/textures/door/normal.jpg")
@@ -100,8 +105,7 @@ export function render12Materials(canvas: HTMLCanvasElement) {
   material.flatShading = true */
 
   // Gives the illusion that the object is illuminated
-  /* const material = new THREE.MeshMatcapMaterial
-  material.matcap = matcapTexture */
+  // const material = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
 
   // const material = new THREE.MeshDepthMaterial
 

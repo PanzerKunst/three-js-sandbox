@@ -8,12 +8,13 @@ export default defineConfig({
     react(),
     checker({
       eslint: {
-        lintCommand: "eslint './src/**/*.{ts,tsx,js,jsx}'",
+        lintCommand: "eslint ./src/**/*.{ts,tsx,js,jsx}",
       },
     })
   ],
   build: {
     manifest: true,
     sourcemap: true
-  }
+  },
+  base: "/three-js-sandbox/"
 })
