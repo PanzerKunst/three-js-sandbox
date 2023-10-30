@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 
-import { render13ThreeDtext } from "../ThreeJsJourney/13-3dText.ts"
+import { render3dText } from "../ThreeJS/3dTextForLIE.ts"
 
 import "./HomePage.scss"
 
@@ -15,7 +15,7 @@ export default function HomePage() {
       return
     }
 
-    render13ThreeDtext(canvas.current)
+    render3dText(canvas.current)
     hasMounted = true
   }, [])
 

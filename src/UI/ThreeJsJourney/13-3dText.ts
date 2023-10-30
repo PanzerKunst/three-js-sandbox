@@ -49,7 +49,7 @@ export function render13ThreeDtext(canvas: HTMLCanvasElement) {
   const textureLoader = new THREE.TextureLoader(loadingManager) // Can load multiple textures
 
   // Tons of other matcaps: https://github.com/nidorx/matcaps
-  const matcapTexture = textureLoader.load("images/textures/matcaps/4.png")
+  const matcapTexture = textureLoader.load("textures/matcaps/4.png")
 
   /**
    * Fonts.

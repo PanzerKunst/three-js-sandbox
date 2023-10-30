@@ -42,7 +42,7 @@ export function render11Textures(canvas: HTMLCanvasElement) {
    */
   const textureLoader = new THREE.TextureLoader(loadingManager) // Can load multiple textures
 
-  const colorTexture = textureLoader.load("/images/textures/door/color.jpg", () => {
+  const colorTexture = textureLoader.load("textures/door/color.jpg", () => {
     // Loading finished
   }, () => {
     // Loading in progress, never works
@@ -55,12 +55,12 @@ export function render11Textures(canvas: HTMLCanvasElement) {
   - 3dtextures.me
   - arroway-textures.ch */
 
-  /* const alphaTexture = textureLoader.load("/images/textures/door/alpha.jpg")
-  const heightTexture = textureLoader.load("/images/textures/door/height.jpg")
-  const normalTexture = textureLoader.load("/images/textures/door/normal.jpg")
-  const ambientOcclusionTexture = textureLoader.load("/images/textures/door/ambientOcclusion.jpg")
-  const metalnessTexture = textureLoader.load("/images/textures/door/metalness.jpg")
-  const roughnessTexture = textureLoader.load("/images/textures/door/roughness.jpg") */
+  /* const alphaTexture = textureLoader.load("textures/door/alpha.jpg")
+  const heightTexture = textureLoader.load("textures/door/height.jpg")
+  const normalTexture = textureLoader.load("textures/door/normal.jpg")
+  const ambientOcclusionTexture = textureLoader.load("textures/door/ambientOcclusion.jpg")
+  const metalnessTexture = textureLoader.load("textures/door/metalness.jpg")
+  const roughnessTexture = textureLoader.load("textures/door/roughness.jpg") */
 
   /* colorTexture.repeat.x = 3
   colorTexture.repeat.y = 3

@@ -44,7 +44,7 @@ export function render12Materials(canvas: HTMLCanvasElement) {
 
   /* eslint-disable no-unused-vars */
 
-  const doorColorTexture = textureLoader.load("/images/textures/door/color.jpg", () => {
+  const doorColorTexture = textureLoader.load("textures/door/color.jpg", () => {
     // Loading finished
   }, () => {
     // Loading in progress, never works
@@ -57,15 +57,15 @@ export function render12Materials(canvas: HTMLCanvasElement) {
   - 3dtextures.me
   - arroway-textures.ch */
 
-  const doorAlphaTexture = textureLoader.load("/images/textures/door/alpha.jpg")
-  const doorHeightTexture = textureLoader.load("/images/textures/door/height.jpg")
-  const doorNormalTexture = textureLoader.load("/images/textures/door/normal.jpg")
-  const doorAmbientOcclusionTexture = textureLoader.load("/images/textures/door/ambientOcclusion.jpg")
-  const doorMetalnessTexture = textureLoader.load("/images/textures/door/metalness.jpg")
-  const doorRoughnessTexture = textureLoader.load("/images/textures/door/roughness.jpg")
+  const doorAlphaTexture = textureLoader.load("textures/door/alpha.jpg")
+  const doorHeightTexture = textureLoader.load("textures/door/height.jpg")
+  const doorNormalTexture = textureLoader.load("textures/door/normal.jpg")
+  const doorAmbientOcclusionTexture = textureLoader.load("textures/door/ambientOcclusion.jpg")
+  const doorMetalnessTexture = textureLoader.load("textures/door/metalness.jpg")
+  const doorRoughnessTexture = textureLoader.load("textures/door/roughness.jpg")
 
-  const matcapTexture = textureLoader.load("/images/textures/matcaps/1.png")
-  const gradientTexture = textureLoader.load("/images/textures/gradients/3.jpg")
+  const matcapTexture = textureLoader.load("textures/matcaps/1.png")
+  const gradientTexture = textureLoader.load("textures/gradients/3.jpg")
   gradientTexture.minFilter = THREE.NearestFilter
   gradientTexture.magFilter = THREE.NearestFilter
 
@@ -75,7 +75,7 @@ export function render12Materials(canvas: HTMLCanvasElement) {
 
   // More HDRIs at https://polyhaven.com/
   // Convert via https://matheowis.github.io/HDRI-to-CubeMap/
-  const environmentTexture = cubeTextureLoader.setPath("/images/textures/environmentMaps/industrial_sunset_puresky_4k/")
+  const environmentTexture = cubeTextureLoader.setPath("textures/environmentMaps/industrial_sunset_puresky_4k/")
     .load([
       "px.png",
       "nx.png",

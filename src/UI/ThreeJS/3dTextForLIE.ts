@@ -35,6 +35,14 @@ export function render3dText(canvas: HTMLCanvasElement) {
   const axesHelper = new THREE.AxesHelper()
   scene.add(axesHelper)
 
+  /**
+   * Camera
+   */
+  // Base camera
+  const camera = new THREE.PerspectiveCamera(75, viewport.aspectRatio, 0.1, 100)
+  camera.position.y = 3
+  scene.add(camera)
+
   const loadingManager = new THREE.LoadingManager(() => {
     // Loading finished
   }, () => {
@@ -49,14 +57,14 @@ export function render3dText(canvas: HTMLCanvasElement) {
   const textureLoader = new THREE.TextureLoader(loadingManager) // Can load multiple textures
 
   // Tons of other matcaps: https://github.com/nidorx/matcaps
-  const matcapTexture = textureLoader.load("/images/textures/matcaps/4.png")
+  const matcapTexture = textureLoader.load("textures/matcaps/4.png")
 
   /**
    * Fonts.
    * To convert to typeface: http://gero3.github.io/facetype.js/
    */
   const fontLoader = new FontLoader(loadingManager)
-  fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
+  fontLoader.load("fonts/helvetiker_regular.typeface.json", (font) => {
     const bevelThickness = 0.03
     const bevelSize = 0.02
 
@@ -81,16 +89,10 @@ export function render3dText(canvas: HTMLCanvasElement) {
     const material = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
 
     const text = new THREE.Mesh(textGeometry, material)
+    text.rotation.x = - Math.PI * 0.5
     scene.add(text)
+    camera.lookAt(text.position)
   })
-
-  /**
-   * Camera
-   */
-  // Base camera
-  const camera = new THREE.PerspectiveCamera(75, viewport.aspectRatio, 0.1, 100)
-  camera.position.z = 3
-  scene.add(camera)
 
   // Controls
   const controls = new OrbitControls(camera, canvas)
