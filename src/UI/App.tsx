@@ -7,7 +7,7 @@ import "./App.scss"
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/three-js-sandbox",
     element: <HomePage/>,
   },
 ])

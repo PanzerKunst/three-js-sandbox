@@ -16,5 +16,5 @@ export default defineConfig({
     manifest: true,
     sourcemap: true
   },
-  base: "/three-js-sandbox/"
+  base: "/three-js-sandbox"
 })
