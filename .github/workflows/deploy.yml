@@ -29,5 +29,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "christophe@8b.nu"
+
       - name: Deploy
         run: npm run deploy
