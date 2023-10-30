@@ -34,5 +34,7 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "christophe@8b.nu"
 
-      - name: Deploy
-        run: npm run deploy
+      - name: GitHub Pages Deploy
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAGES_TOKEN }}@github.com/panzerkunst/three-js-sandbox.git
+          npm run deploy
