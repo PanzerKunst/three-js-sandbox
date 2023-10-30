@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 
-import { render13ThreeDtext } from "../ThreeJS/13-3dText.ts"
+import { render13ThreeDtext } from "../ThreeJsJourney/13-3dText.ts"
 
 import "./HomePage.scss"
 
