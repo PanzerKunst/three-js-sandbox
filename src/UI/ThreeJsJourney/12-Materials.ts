@@ -101,13 +101,13 @@ export function render12Materials(canvas: HTMLCanvasElement) {
 
   // material.side = THREE.DoubleSide */
 
-  /* const material = new THREE.MeshNormalMaterial
+  /* const material = new THREE.MeshNormalMaterial()
   material.flatShading = true */
 
   // Gives the illusion that the object is illuminated
   // const material = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
 
-  // const material = new THREE.MeshDepthMaterial
+  // const material = new THREE.MeshDepthMaterial()
 
   // Reacts to light
   // const material = new THREE.MeshLambertMaterial()

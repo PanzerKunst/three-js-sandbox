@@ -32,8 +32,8 @@ export function render3dText(canvas: HTMLCanvasElement) {
   const scene = new THREE.Scene()
 
   // Axes helper
-  const axesHelper = new THREE.AxesHelper()
-  scene.add(axesHelper)
+  /* const axesHelper = new THREE.AxesHelper()
+  scene.add(axesHelper) */
 
   /**
    * Camera
